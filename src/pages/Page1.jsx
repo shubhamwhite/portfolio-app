@@ -45,7 +45,7 @@ const Page1 = () => {
         <div id='tiltDiv' ref={tiltRef} className="mt-28 ml-5">
           <h1 className="text-[4vw] font-[anzo4]">
             I AM{" "}
-            <span className="bg-gradient-to-r from-[#ff9865] to-[#ff691e] text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-[#0ae448] to-[#abff84] text-transparent bg-clip-text">
               NIGHT MODE
             </span>
             ™
