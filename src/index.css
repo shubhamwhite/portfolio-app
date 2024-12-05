@@ -46,8 +46,9 @@ body{
   perspective: 1000px;
 }
 
-#tiltDiv{
 
+
+#tiltDiv{
   width: fit-content;
   transform: rotateY(40deg) rotateX(50deg);
 }

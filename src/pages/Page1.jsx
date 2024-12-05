@@ -12,8 +12,8 @@ const Page1 = () => {
   const [yVal, setYVal] = useState(0)
 
   const mouseMoving = (e) => {
-    // console.log(e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/2)
-    setXVal((e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/2)/20)
+    
+    setXVal((e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/2)/40)
     setYVal(-(e.clientY - tiltRef.current.getBoundingClientRect().y - tiltRef.current.getBoundingClientRect().height/2)/20)
 
      tiltRef.current.style.transform = `rotateX(${yVal}deg) rotateY(${xVal}deg)`
@@ -22,9 +22,9 @@ const Page1 = () => {
   useGSAP(function(){
     gsap.to(tiltRef.current,{
       transform : `rotateX(${yVal}deg) rotateY(${xVal}deg)`,
-      duration:2,
-      // ease: 'power4.out'
-      ease:'elastic.out(1,0.2)'
+      duration:6,
+      ease: 'power2.out'
+      // ease:'elastic.out(1,0.3)'
     })
   },[xVal,yVal])
 
@@ -37,20 +37,22 @@ const Page1 = () => {
     >
       <div
         id='page1-in'
-        className="shadow-xl p-20 shadow-gray-700 h-full  rounded-[20px] relative"
+        className="shadow-xl p-20  h-full rounded-[20px] "
         style={{
           backgroundImage: `url(${manImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="h-[4vw] w-[200px] ml-10 flex items-center justify-center rounded-full text-white font-[anzo3] text-[42px]">
-          Shubham.io
-        </div>
+       <div className="h-[4vw] w-[200px] ml-10 flex items-center justify-center rounded-full text-white font-[anzo3] text-[42px] relative">
+  Shubham.io
+ 
+</div>
+
 
         <TiltText til={tiltRef} />     
-
         <Page1Bottom />
+
       </div>
     </div>
   );
