@@ -1,27 +1,8 @@
-import React, { useEffect, useRef } from "react";
+
 
 const Page2 = () => {
-  const textRef = useRef(null);
 
-  // Parallax Effect on Scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (textRef.current) {
-        // Dynamically translate the image's position for parallax effect
-        textRef.current.style.transform = `translateY(${
-          scrollPosition * 0.5
-        }px)`;
-      }
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -35,7 +16,7 @@ const Page2 = () => {
           </h1>
         </div>
         <div className="rotateText">
-          <h1 className="text-[42vw] text-[#0ae448] font-[anzo1] leading-[35vw]">
+          <h1 className="text-[42vw] text-green-500 font-[anzo1] leading-[35vw]">
             CODING
           </h1>
         </div>
@@ -45,7 +26,7 @@ const Page2 = () => {
           </h1>
         </div>
         <div className="rotateText">
-          <h1 className="text-[42vw] text-[#0ae448] font-[anzo1] leading-[35vw]">
+          <h1 className="text-[42vw] text-green-500 font-[anzo1] leading-[35vw]">
             CODING
           </h1>
         </div>

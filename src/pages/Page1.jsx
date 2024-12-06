@@ -13,8 +13,8 @@ const Page1 = () => {
 
   const mouseMoving = (e) => {
     
-    setXVal((e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/2)/40)
-    setYVal(-(e.clientY - tiltRef.current.getBoundingClientRect().y - tiltRef.current.getBoundingClientRect().height/2)/20)
+    setXVal((e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/4)/90)
+    setYVal(-(e.clientY - tiltRef.current.getBoundingClientRect().y - tiltRef.current.getBoundingClientRect().height/2)/10)
 
      tiltRef.current.style.transform = `rotateX(${yVal}deg) rotateY(${xVal}deg)`
   };
@@ -22,7 +22,7 @@ const Page1 = () => {
   useGSAP(function(){
     gsap.to(tiltRef.current,{
       transform : `rotateX(${yVal}deg) rotateY(${xVal}deg)`,
-      duration:6,
+      duration:10,
       ease: 'power2.out'
       // ease:'elastic.out(1,0.3)'
     })

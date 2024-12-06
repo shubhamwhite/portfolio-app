@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Page4 = () => {
   return (
@@ -26,8 +26,11 @@ const Page4 = () => {
             alt="Example"
           />
 
-          <div className="bg-black rounded-3xl p-24">
-            <h1 className="text-cream1 text-center">Goto</h1>
+          {/* Button Section */}
+          <div className="bg-black rounded-3xl p-24 flex justify-center">
+            <button className="bg-green-500 text-black px-8 py-4 rounded-full font-[anzo4] text-lg shadow-md border hover:bg-blue-600 hover:text-cream1 transition duration-300">
+              View More
+            </button>
           </div>
         </div>
       </div>
